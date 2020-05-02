@@ -40,10 +40,53 @@
     <!--Boton que llamara a la funcion division-->
     <button onclick="division()">DIVISION</button><br>
     <br>
-    
+
     <!--Campo donde se mostrara el resultados-->
     <label for="resultado">Resultado</label>
     <input type= "number" id="resultado" name="resultado"> 
+
+    <script>
+        function suma(){
+
+            //Variables que se utilizaran
+            var a;
+            var b;
+            var c;
+            var resultado;
+
+            //Valores del formulario
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var resultado;
+
+            //verificar si las casillas de las variables estan en blanco
+
+            if(a == "" ){
+                a = 0;
+            }else{
+               a = parseInt(a);
+            }
+
+            if(b == "" ){
+                b = 0;
+            }else{
+               b = parseInt(b);
+            }
+
+            if(c == "" ){
+                c = 0;
+            }else{
+               c = parseInt(c);
+            }
+
+            //enviamos la suma de los valores
+            resultado = a + b + c;
+
+            //mostramos resultado
+            document.getElementById("resultado").value = resultado;
+        }
+    </script>
 
 
 
